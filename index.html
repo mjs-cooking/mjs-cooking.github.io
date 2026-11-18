@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MJ's Cooking Gallery</title>
+  <meta name="description" content="Home-cooked dishes from MJ's kitchen — South Indian classics, sweets, bakes, biryanis and more.">
+  <meta property="og:title" content="MJ's Cooking Gallery">
+  <meta property="og:description" content="Home-cooked dishes from MJ's kitchen.">
+  <meta property="og:image" content="images/thumbs/chicken-biriyani.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍲</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">From MJ's kitchen</p>
+    <h1>MJ's Cooking Gallery</h1>
+    <p class="lede">Home-cooked dishes — South Indian classics, festive sweets, bakes, biryanis and everything in between.</p>
+  </header>
+
+  <nav class="toolbar" aria-label="Filter dishes">
+    <input id="search" type="search" placeholder="Search dishes…" aria-label="Search dishes" autocomplete="off">
+    <div id="chips" class="chips" role="toolbar" aria-label="Categories"></div>
+  </nav>
+
+  <main>
+    <p id="count" class="count" aria-live="polite"></p>
+    <ul id="grid" class="grid"></ul>
+    <p id="empty" class="empty" hidden>No dishes match that search.</p>
+  </main>
+
+  <dialog id="viewer" class="viewer" aria-label="Dish photo">
+    <button class="nav close" data-act="close" aria-label="Close">✕</button>
+    <button class="nav prev" data-act="prev" aria-label="Previous dish">‹</button>
+    <figure>
+      <img id="viewer-img" alt="">
+      <figcaption>
+        <span id="viewer-cat" class="tag"></span>
+        <h2 id="viewer-title"></h2>
+        <p id="viewer-caption"></p>
+      </figcaption>
+    </figure>
+    <button class="nav next" data-act="next" aria-label="Next dish">›</button>
+  </dialog>
+
+  <footer>Made with love (and ghee) · <span id="year"></span></footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
